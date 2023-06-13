@@ -1,0 +1,46 @@
+version: '3'
+services:
+
+  infinispan-europe-01:
+    # container_name: infinispan
+    image: quay.io/infinispan/server:14.0
+    # hostname: infinispan
+    volumes:
+      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+    environment:
+      USER: admin
+      PASS: password
+    ports:
+      - 11222:11222
+      - 11223:11223
+      # - 9999:9999
+    networks:
+      - infinispan
+    command:
+      - "-c infinispan.yaml"
+
+  infinispan-europe-02:
+    # container_name: infinispan
+    image: quay.io/infinispan/server:14.0
+    # hostname: infinispan
+    volumes:
+      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+    environment:
+      USER: admin
+      PASS: password
+    ports:
+      - 11222:11222
+      - 11223:11223
+      # - 9999:9999
+    networks:
+      - infinispan
+    command:
+      - "-c infinispan.yaml"
+    # depends_on:
+    #   - infinispan-europe-01
+
+networks:
+  infinispan:
+    driver: bridge
+
+
