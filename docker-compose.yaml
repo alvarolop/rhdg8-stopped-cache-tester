@@ -6,10 +6,11 @@ services:
     image: quay.io/infinispan/server:14.0
     # hostname: infinispan
     volumes:
-      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/infinispan-europe-1.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
     environment:
       USER: admin
       PASS: password
+      JAVA_OPTIONS: "-Dinfinispan.node.name=infinispan-europe-01"
     ports:
       - 11222:11222
       - 11223:11223
@@ -24,13 +25,14 @@ services:
     image: quay.io/infinispan/server:14.0
     # hostname: infinispan
     volumes:
-      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/infinispan-europe-2.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
     environment:
       USER: admin
       PASS: password
+      JAVA_OPTIONS: "-Dinfinispan.node.name=infinispan-europe-02"
     ports:
-      - 11222:11222
-      - 11223:11223
+      - 11322:11222
+      - 11323:11223
       # - 9999:9999
     networks:
       - infinispan
