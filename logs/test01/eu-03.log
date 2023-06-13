@@ -1,0 +1,68 @@
+[eu-03] | ################################################################################
+[eu-03] | # IDENTITIES_BATCH not specified                                               #
+[eu-03] | # Generating Identities yaml using USER and PASS env vars.                     #
+[eu-03] | ################################################################################
+[eu-03] | 
+[eu-03] | 2023-06-13 17:40:29,889 INFO  (main) [BOOT] JVM OpenJDK 64-Bit Server VM Red Hat, Inc. 17.0.4.1+1-LTS
+[eu-03] | 2023-06-13 17:40:29,898 INFO  (main) [BOOT] JVM arguments = [-server, --add-exports, java.naming/com.sun.jndi.ldap=ALL-UNNAMED, -Xlog:gc*:file=/opt/infinispan/server/log/gc.log:time,uptimemillis:filecount=5,filesize=3M, -Dinfinispan.node.name=infinispan-europe-02, -XX:+ExitOnOutOfMemoryError, -XX:MetaspaceSize=32m, -XX:MaxMetaspaceSize=96m, -Djava.net.preferIPv4Stack=true, -Djava.awt.headless=true, -Dvisualvm.display.name=infinispan-server, -Djava.util.logging.manager=org.infinispan.server.loader.LogManager, -Dinfinispan.server.home.path=/opt/infinispan, -classpath, :/opt/infinispan/boot/infinispan-server-runtime-14.0.1.Final-loader.jar, org.infinispan.server.loader.Loader, org.infinispan.server.Bootstrap, --bind-address=0.0.0.0, -c, infinispan.yaml]
+[eu-03] | 2023-06-13 17:40:29,901 INFO  (main) [BOOT] PID = 171
+[eu-03] | 2023-06-13 17:40:29,942 INFO  (main) [org.infinispan.SERVER] ISPN080000: Infinispan Server 14.0.1.Final starting
+[eu-03] | 2023-06-13 17:40:29,942 INFO  (main) [org.infinispan.SERVER] ISPN080017: Server configuration: infinispan.yaml
+[eu-03] | 2023-06-13 17:40:29,942 INFO  (main) [org.infinispan.SERVER] ISPN080032: Logging configuration: /opt/infinispan/server/conf/log4j2.xml
+[eu-03] | 2023-06-13 17:40:31,086 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'query-dsl-filter-converter-factory'
+[eu-03] | 2023-06-13 17:40:31,086 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'continuous-query-filter-converter-factory'
+[eu-03] | 2023-06-13 17:40:31,092 INFO  (main) [org.infinispan.SERVER] ISPN080027: Loaded extension 'iteration-filter-converter-factory'
+[eu-03] | 2023-06-13 17:40:31,101 WARN  (main) [org.infinispan.SERVER] ISPN080059: No script engines are available
+[eu-03] | 2023-06-13 17:40:32,112 WARN  (main) [org.infinispan.PERSISTENCE] ISPN000554: jboss-marshalling is deprecated and planned for removal
+[eu-03] | 2023-06-13 17:40:32,162 INFO  (main) [org.infinispan.CONTAINER] ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+[eu-03] | 2023-06-13 17:40:33,173 WARN  (main) [org.infinispan.protostream.impl.AnnotatedDescriptorImpl] Encountered and ignored and unknown annotation "Scope" on org.infinispan.persistence.query.core.LocalQueryStatistics
+[eu-03] | 2023-06-13 17:40:33,584 INFO  (main) [org.infinispan.CLUSTER] ISPN000078: Starting JGroups channel `cluster` with stack `tcp`
+[eu-03] | 2023-06-13 17:40:33,859 INFO  (main) [org.jgroups.JChannel] local_addr: ae1587c7-4b29-40f5-9e7f-97be4b99277f, name: infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:33,897 INFO  (main) [org.jgroups.protocols.FD_SOCK2] server listening on *.57800
+[eu-03] | 2023-06-13 17:40:33,955 INFO  (main) [org.infinispan.CLUSTER] ISPN000094: Received new cluster view for channel cluster: [infinispan-europe-01|2] (3) [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02]
+[eu-03] | 2023-06-13 17:40:34,103 INFO  (main) [org.infinispan.CLUSTER] ISPN000079: Channel `cluster` local address is `infinispan-europe-02`, physical addresses are `[10.89.11.4:7800]`
+[eu-03] | 2023-06-13 17:40:34,172 INFO  (main) [org.infinispan.CONTAINER] ISPN000390: Persisted state, version=14.0.1.Final timestamp=2023-06-13T17:40:34.169954349Z
+[eu-03] | 2023-06-13 17:40:34,827 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache ___event_log_cache on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:34,860 INFO  (main) [org.infinispan.CONTAINER] ISPN000104: Using EmbeddedTransactionManager
+[eu-03] | 2023-06-13 17:40:35,078 INFO  (jgroups-10,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.CLIENT_SERVER_TX_TABLE][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:35,137 INFO  (non-blocking-thread-infinispan-europe-02-p2-t8) [org.infinispan.LIFECYCLE] [Context=org.infinispan.CLIENT_SERVER_TX_TABLE][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:35,201 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache org.infinispan.CLIENT_SERVER_TX_TABLE on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:35,307 INFO  (jgroups-10,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=___protobuf_metadata][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:35,313 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache ___protobuf_metadata on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:35,334 INFO  (non-blocking-thread-infinispan-europe-02-p2-t3) [org.infinispan.LIFECYCLE] [Context=___protobuf_metadata][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:35,468 INFO  (jgroups-10,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=___script_cache][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:35,474 INFO  (non-blocking-thread-infinispan-europe-02-p2-t10) [org.infinispan.LIFECYCLE] [Context=___script_cache][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:35,627 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache ___script_cache on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:35,644 INFO  (jgroups-10,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.CONFIG][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:35,661 INFO  (non-blocking-thread-infinispan-europe-02-p2-t8) [org.infinispan.LIFECYCLE] [Context=org.infinispan.CONFIG][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:35,731 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache org.infinispan.CONFIG on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:35,785 INFO  (jgroups-5,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.COUNTER][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:35,828 INFO  (jgroups-5,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.COUNTER][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:35,927 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache org.infinispan.COUNTER on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:35,966 INFO  (jgroups-5,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.LOCKS][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:35,976 INFO  (non-blocking-thread-infinispan-europe-02-p2-t12) [org.infinispan.LIFECYCLE] [Context=org.infinispan.LOCKS][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:36,035 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache org.infinispan.LOCKS on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:36,106 INFO  (jgroups-5,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.PERMISSIONS][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:36,123 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache org.infinispan.PERMISSIONS on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:36,124 INFO  (non-blocking-thread-infinispan-europe-02-p2-t8) [org.infinispan.LIFECYCLE] [Context=org.infinispan.PERMISSIONS][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:36,161 INFO  (jgroups-5,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=org.infinispan.ROLES][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:36,171 INFO  (non-blocking-thread-infinispan-europe-02-p2-t15) [org.infinispan.LIFECYCLE] [Context=org.infinispan.ROLES][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:36,175 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache org.infinispan.ROLES on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:36,218 INFO  (jgroups-10,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=proto-cache][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:36,261 INFO  (jgroups-6,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=proto-cache][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:36,356 DEBUG (main) [org.infinispan.cache.impl.CacheImpl] Started cache proto-cache on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:36,598 WARN  (main) [org.infinispan.SERVER] ISPN080072: JMX remoting enabled without a default security realm. All connections will be rejected.
+[eu-03] | 2023-06-13 17:40:36,627 INFO  (main) [org.infinispan.server.core.telemetry.TelemetryServiceFactory] ISPN000953: OpenTelemetry integration is disabled
+[eu-03] | 2023-06-13 17:40:36,745 INFO  (jgroups-11,infinispan-europe-02) [org.infinispan.LIFECYCLE] [Context=___hotRodTopologyCache_hotrod-default][Scope=infinispan-europe-02]ISPN100002: Starting rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], phase READ_OLD_WRITE_ALL, topology id 6
+[eu-03] | 2023-06-13 17:40:36,770 INFO  (non-blocking-thread-infinispan-europe-02-p2-t7) [org.infinispan.LIFECYCLE] [Context=___hotRodTopologyCache_hotrod-default][Scope=infinispan-europe-02]ISPN100010: Finished rebalance with members [infinispan-europe-01, infinispan-europe-02, infinispan-europe-02], topology id 6
+[eu-03] | 2023-06-13 17:40:36,882 DEBUG (ForkJoinPool.commonPool-worker-1) [org.infinispan.cache.impl.CacheImpl] Started cache ___hotRodTopologyCache_hotrod-default on infinispan-europe-02
+[eu-03] | 2023-06-13 17:40:36,916 INFO  (ForkJoinPool.commonPool-worker-1) [org.infinispan.SERVER] ISPN080018: Started connector HotRod (internal)
+[eu-03] | 2023-06-13 17:40:36,958 INFO  (main) [org.infinispan.SERVER] ISPN080018: Started connector REST (internal)
+[eu-03] | 2023-06-13 17:40:36,987 INFO  (main) [org.infinispan.SERVER] Using transport: Epoll
+[eu-03] | 2023-06-13 17:40:37,079 INFO  (main) [org.infinispan.SERVER] ISPN080004: Connector SinglePort (default) listening on 0.0.0.0:11222
+[eu-03] | 2023-06-13 17:40:37,080 INFO  (main) [org.infinispan.SERVER] ISPN080034: Server 'infinispan-europe-02' listening on http://0.0.0.0:11222
+[eu-03] | 2023-06-13 17:40:37,136 INFO  (main) [org.infinispan.SERVER] ISPN080018: Started connector REST (internal)
+[eu-03] | 2023-06-13 17:40:37,138 INFO  (main) [org.infinispan.SERVER] Using transport: Epoll
+[eu-03] | 2023-06-13 17:40:37,147 INFO  (main) [org.infinispan.SERVER] ISPN080004: Connector SinglePort (metrics) listening on 0.0.0.0:11223
+[eu-03] | 2023-06-13 17:40:37,148 INFO  (main) [org.infinispan.SERVER] ISPN080034: Server 'infinispan-europe-02' listening on http://0.0.0.0:11223
+[eu-03] | 2023-06-13 17:40:37,254 INFO  (main) [org.infinispan.SERVER] ISPN080001: Infinispan Server 14.0.1.Final started in 7311ms
