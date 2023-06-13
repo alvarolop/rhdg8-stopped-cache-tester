@@ -5,5 +5,15 @@
 
 [source, bash]
 ----
-podman-compose up
+podman-compose up eu-01
+
+# Wait until it is ready
+
+podman-compose up eu-02
+
+# Wait until it is ready
+
+podman-compose up eu-03
+
+# Wait until it is ready
 ----

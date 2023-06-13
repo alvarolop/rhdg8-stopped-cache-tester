@@ -1,15 +1,18 @@
 version: '3'
 services:
 
-  infinispan-europe-01:
-    # container_name: infinispan
+# TO DO: Add extension fields: https://docs.docker.com/compose/compose-file/compose-file-v3/#extension-fields
+
+  eu-01:
     image: quay.io/infinispan/server:14.0
-    # hostname: infinispan
+    privileged: true
     volumes:
-      - ./conf/infinispan-europe-1.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/log4j2.xml:/opt/infinispan/server/conf/log4j2.xml
     environment:
       USER: admin
       PASS: password
+      ISPN_HOME: /opt/infinispan
       JAVA_OPTIONS: "-Dinfinispan.node.name=infinispan-europe-01"
     ports:
       - 11222:11222
@@ -20,15 +23,16 @@ services:
     command:
       - "-c infinispan.yaml"
 
-  infinispan-europe-02:
-    # container_name: infinispan
+  eu-02:
     image: quay.io/infinispan/server:14.0
-    # hostname: infinispan
+    privileged: true
     volumes:
-      - ./conf/infinispan-europe-2.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/log4j2.xml:/opt/infinispan/server/conf/log4j2.xml
     environment:
       USER: admin
       PASS: password
+      ISPN_HOME: /opt/infinispan
       JAVA_OPTIONS: "-Dinfinispan.node.name=infinispan-europe-02"
     ports:
       - 11322:11222
@@ -38,11 +42,27 @@ services:
       - infinispan
     command:
       - "-c infinispan.yaml"
-    # depends_on:
-    #   - infinispan-europe-01
+
+  eu-03:
+    image: quay.io/infinispan/server:14.0
+    privileged: true
+    volumes:
+      - ./conf/infinispan-europe.yaml:/opt/infinispan/server/conf/infinispan.yaml:Z
+      - ./conf/log4j2.xml:/opt/infinispan/server/conf/log4j2.xml
+    environment:
+      USER: admin
+      PASS: password
+      ISPN_HOME: /opt/infinispan
+      JAVA_OPTIONS: "-Dinfinispan.node.name=infinispan-europe-02"
+    ports:
+      - 11422:11222
+      - 11423:11223
+      # - 9999:9999
+    networks:
+      - infinispan
+    command:
+      - "-c infinispan.yaml"
 
 networks:
   infinispan:
     driver: bridge
-
-
